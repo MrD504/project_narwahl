@@ -1,9 +1,19 @@
-import React, { useCallback, useState } from "react";
+import React, {
+  FunctionComponent,
+  ReactNode,
+  useCallback,
+  useState,
+} from "react";
 import { AppBar, Drawer, IconButton, Toolbar } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-const Layout = ({ children }) => {
+
+type Props = {
+  children: ReactNode;
+};
+
+const Layout: FunctionComponent<Props> = ({ children }) => {
   const [open, setOpen] = useState(false);
-  const toggleDrawer = useCallback((open) => {
+  const toggleDrawer = useCallback((open: boolean) => {
     setOpen(open);
   }, []);
 

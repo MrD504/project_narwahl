@@ -8,7 +8,7 @@ function App() {
     <div className="App dark">
       <Layout>
         <Routes>
-          <Route path="/account" exact element={<div>account</div>} />
+          <Route path="/account" element={<div>account</div>} />
           <Route path="*" element={<Navigate to="/account" />} />
         </Routes>
       </Layout>
